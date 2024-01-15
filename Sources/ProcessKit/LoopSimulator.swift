@@ -9,9 +9,9 @@ import Foundation
 import AxisSpacing
 
 public class LoopSimulator {
-    var process = Process()
-    var pid = PID()
-    var tuner = Tuner()
+    public var process = Process()
+    public var pid = PID()
+    public var tuner = Tuner()
     
     public var spData = [(x: Double, y: Double)]() // 0 to 1
     public var mvData = [(x: Double, y: Double)]()
@@ -220,7 +220,7 @@ public class LoopSimulator {
     
     public var plotTime = 30.0
     
-    func calcTuningParams() {
+    public func calcTuningParams() {
         print("calc tuning from simulator...")
         tuner.processGainScaled = process.gainScaled
         tuner.calcTuningParams()
