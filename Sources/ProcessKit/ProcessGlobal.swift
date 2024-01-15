@@ -1,6 +1,6 @@
 //
-//  Global.swift
-//  PIDTuner
+//  ProcessGlobal.swift
+//  ProcessKit
 //
 //  Created by Rick Street on 7/30/20.
 //  Copyright © 2020 Rick Street. All rights reserved.
@@ -11,14 +11,14 @@ import Foundation
 // Usage:
 // let tuner = SingletonTuner.sharedInstance
 public final class SingletonTuner {
-    static let sharedInstance = Tuner()
+    public static let sharedInstance = Tuner()
     private init() {} //This prevents others from using the default '()' initializer for this class.
 }
 
 // Usage:
 // let simulator = SingletonLoopSimulator.sharedInstance
 public final class SingletonLoopSimulator {
-    static let sharedInstance = LoopSimulator()
+    public static let sharedInstance = LoopSimulator()
     private init() {} //This prevents others from using the default '()' initializer for this class.
 }
 
