@@ -12,7 +12,7 @@ let package = Package(
             targets: ["ProcessKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/RickStreet/DoubleKit.git", from: "1.0.6"),
+        .package(url: "https://github.com/RickStreet/DoubleKit.git", from: "1.0.7"),
         .package(url: "https://github.com/RickStreet/AxisSpacing.git", from: "1.0.0")
     ],
     targets: [
