@@ -338,6 +338,7 @@ public class LoopSimulator {
         plotCVPointLoop: for point in cvData {
             cvDataEU.append((point.x, point.y * (cvHiRange! - cvLoRange!)))
             cvDataPercent.append((point.x, point.y * 100.0))
+            print("%CV \(point.y * 100.0)")
         }
         for point in spData {
             spDataEU.append((point.x, point.y * (cvHiRange! - cvLoRange!)))
