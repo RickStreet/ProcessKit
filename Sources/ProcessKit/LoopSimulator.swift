@@ -50,6 +50,17 @@ public class LoopSimulator {
         }
     }
     
+    var step: Double?
+    
+    public var stepEU: Double? {
+        if let hi = cvHiRange, let lo = cvLoRange, let step = step  {
+            return (hi - lo) * step
+        }
+        return nil
+    }
+    
+    
+    
     // Test Test
     // Positional Values
     public var sp = 0.5 // Initial setpoint at 50% - process and controller in velocity form
@@ -278,6 +289,7 @@ public class LoopSimulator {
             print("loop simulator is not ready!")
             return
         }
+        self.step = step
         getPlotTime()
         let numberIterations = Int(plotTime * 60.0 / execFreq)
         var iterationsToSkip = numberIterations / numberPlotPoints
